@@ -1,20 +1,1225 @@
-.parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr) 5fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+
+@font-face {
+    font-family: "Necto";
+    src: url("fonts/NectoMono-Regular.otf");
+}
+
+
+@font-face {
+  font-family: 'Squish';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("fonts/SquishVF.woff2") format("woff2-variations");
+  }
+
+  @font-face {
+  font-family: 'AM';
+    src: url("fonts/AmbiantVariable-LightSans.ttf");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body, 
+p,
+.h1 {
+  font-family: Necto, serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+  text-shadow: 0 0 3px GreenYellow;
+  z-index: 10;
+}
+
+a:hover {
+   color: transparent;
+   text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
+.box{
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+
+}
+
+.textbox{
+text-align: left;
+overflow-wrap: break-word;
+word-wrap: break-word;
+}
+
+.column {
+  width: 24.5vw;
+  float: left;
+  word-wrap: break-word
+  }
+
+.column2 {
+  float: left;
+  word-wrap: break-word
+}
+
+
+.cover{
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 0px solid black;
+  padding: 10px 10px 0px 10px;
+  background-color: GreenYellow;
+  background:url('images/tendril.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  grid-template-columns: 36px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.g {
+  height:100vh;
+  width: 98%;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+  border-right: 0px solid black;
+  display: inline-block;
+  position: relative;
+}
+
+
+/* BUTTONS
+-------------------------------------------------- */
+
+.solid button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid white;
+    font-family: "Necto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 2px 5px 2px 5px;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    user-select: none;
+    box-shadow: 0 0 8px 4px  white;
+
+}
+
+
+.area button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid GreenYellow;
+    font-family: "Necto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 2px 5px 2px 5px;
+    color: black;
+    background-color: GreenYellow;
+    border-radius: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.line button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid white;
+    font-family: "Necto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 2px 5px 2px 5px;
+    color: black;
+    background-color: GreenYellow;
+    border-radius: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+
+.textbox button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid white;
+    font-family: "Necto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 2px 5px 2px 5px;
+    color: black;
+    background-color: GreenYellow;
+    border-radius: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+
+.column button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid white;
+    font-family: "Necto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 2px 5px 2px 5px;
+    color: black;
+    background-color: GreenYellow;
+    border-radius: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+
+
+.g button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0px solid black;
+    font-family: "Necto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 2px 10px 2px 10px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 8px 3px  white;
+}
+
+
+hr {
+  display: overlay;
+  margin-right: auto;
+  border-width: 1px solid black;
+}
+
+
+/* SPACES
+-------------------------------------------------- */
+
+.rowtext {
+  width: auto;
+  height: 100vh;
+  border-bottom: 1px solid black;
+  padding: 10px 10px 10px 10px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 36px auto;
+}
+
+
+.row {
+  width: auto;
+  height: auto;
+  border-bottom: 1px solid black;
+  padding: 10px 10px 10px 10px;
+  display: grid;
+  overflow-wrap: break-word;
+}
+
+.participant {
+  width: auto;
+  height: auto;
+  border-bottom: 1px solid black;
+  padding: 0px 0px 0px 0px;
+  display: grid;
+}
+
+
+.area {
+  padding: 10px 10px 10px 10px;
+  border-top: 0px solid black;
+  position: relative;
+}
+
+.line {
+  padding: 10px 10px 10px 10px;
+  border-top: 1px solid black;
+}
+
+
+.break {
+  padding: 10px 10px 10px 10px;
+  border-top: 1px solid black;
+    background-color: GreenYellow;
+}
+
+
+.solid {
+  padding: 10px 10px 20px 10px;
+  background: #C8ECC5;
+  border-top: 0px solid black;
+  box-shadow: 0 0 30px 25px  #C8ECC5;
+}
+
+
+.dot {
+  padding: 10px 10px 10px 10px;
+  border-top: 1px solid black;
+}
+
+
+.right:hover .dot {
+  filter: blur(5px);
+}
+
+.right .dot:hover {
+  filter: blur(0);
+}
+
+
+
+/* CONTAINERS
+-------------------------------------------------- */
+
+.big{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+.left {
+  width: 50vw;
+  background: solid black;
+    position: relative;
+  /*border-right: 1px solid black;*/
+}
+
+.right {
+  width: 50vw;
+  overflow: auto;
+  /*background-color: black;*/
+}
+
+
+.right.scroll{
+  padding:right;
+}
+
+.left, 
+.right {
+  overflow-y: scroll; 
+  overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+  height: 100vh;
+}
+
+
+/* SCROLL BAR RIGHT
+-------------------------------------------------- */
+
+
+    /* Track */
+
+.right::-webkit-scrollbar-track {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
     }
+
+    /* Handle */
+
+.right::-webkit-scrollbar-thumb {
+    background: GreenYellow;
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: background-color .5s;
+    }
+
+    /* Handle on hover */
     
-    .header { grid-area: 1 / 1 / 2 / 3; }
-    .left { grid-area: 2 / 1 / 4 / 2; }
-    .right { grid-area: 2 / 2 / 4 / 3; }
-    .footer { grid-area: 4 / 1 / 5 / 3; }
-
-
-    .header {
-        display: grid;
-        justify-content: center;
-        align-items: center;
+.right::-webkit-scrollbar-thumb:hover {
+    background: white; 
     }
+
+.right::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+ 
+/* SCROLL BAR LEFT
+-------------------------------------------------- */
+
+    /* Track */
+
+   
+.left::-webkit-scrollbar-track {
+    background: white; 
+    border: 1px solid black;
+    border-radius: 6px;
+    }
+
+    /* Handle */
+
+.left::-webkit-scrollbar-thumb {
+    background: GreenYellow;
+    border: 1px solid black;
+    border-radius: 6px;
+    overflow: auto
+    }
+
+    /* Handle on hover */
+
+.left::-webkit-scrollbar-thumb:hover {
+      background: white; 
+    }
+
+
+.left::-webkit-scrollbar {
+    width: 6px;
+    }
+
+ /* END SCROLLBAR */
+
+
+
+
+/* VARIABLE STUFF
+-------------------------------------------------- */
+
+
+#font {
+  font-family: 'Squish';
+  font-size: 65vw;
+  font-weight: 100;
+  line-height: 85vh;
+}
+
+
+#weight-slider {
+  width: 25vw;
+  height: 2px;
+  border-radius: 3rem;
+  background: white;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+
+#weight-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background: white;
+  border: 0px solid black;
+  cursor: pointer;
+}
+
+
+
+#weight-slider::-moz-range-thumb {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background: red;
+  cursor: pointer;
+}
+
+
+
+.g.range {
+  position: relative;
+      width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* COLOR
+-------------------------------------------------- */
+.blank {
+  color: white;
+}
+
+.today,
+#more {
+  background: #F1F1F1;
+}
+
+
+#person1 {
+  background: #FFFFE0;
+}
+
+
+.glyph {
+
+  /*color: #cff598;*/
+  color: white;
+  /*text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;*/
+  /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+   text-shadow: -10px -10px 10 #ffff, 10px -10px 0 #ffff, -10px 10px 0 #ffff, 10px 10px 0 #ffff;
+      /*text-shadow: 0 0 15px #ffff;*/
+}
+
+
+.icon {
+  color: GreenYellow;
+}
+
+.time {
+  color: DarkGray;
+}
+
+
+.ex1 {
+  background-color: GreenYellow;
+  color: black;
+}
+
+.ex2 {
+  background-color: GreenYellow;
+  color: black;
+}
+
+.ex3 {
+  background-color: GreenYellow;
+  color: black;
+}
+
+.ex4 {
+  background-color: GreenYellow;
+  color: black;
+}
+
+.outcome {
+  text-decoration: underline double;
+  text-decoration-color: GreenYellow;
+  color: black;
+}
+
+.final {
+  background-color: GreenYellow;
+  color: black;
+}
+
+
+.link {
+  color: white;
+}
+.link:hover {
+  color:black;
+}
+
+.no-class {
+  color: lightgray;
+}
+
+
+
+
+/* PARTICIPANT IMAGES
+--------------------------------------------------*/
+       
+
+.img1,
+.gif1, 
+.img2, 
+.gif2 {
+  display: table-cell;
+  width: 100%;
+}
+
+
+ /* PARTICIPANT 1
+              --------------------------------------------------*/
+
+.img1 {
+  width: 50%;
+  float: left;
+  background:url('images/img1.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 101%;
+padding-top: 50%;
+  }
+
+
+.gif1 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img1.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+ /* PARTICIPANT 2
+              --------------------------------------------------*/
+
+
+.img2 {
+  width: 50%;
+  float: left;
+  background:url('images/img2.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 155%;
+padding-top: 50%;
+  }
+
+
+.gif2 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img2.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  padding-top: 50%;
+  }
+
+
+
+/* PARTICIPANT 3
+              --------------------------------------------------*/
+
+
+.img3 {
+  width: 50%;
+  float: left;
+   background:url('images/img3.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  padding-top: 50%;
+  }
+
+
+.gif3 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img3_1.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  padding-top: 50%;
+  }
+
+
+
+/* PARTICIPANT 4
+              --------------------------------------------------*/
+
+.img4 {
+  width: 50%;
+  float: left;
+  background:url('images/img4.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+.gif4 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img4.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+
+
+/* PARTICIPANT 6
+              --------------------------------------------------*/
+
+.img6 {
+  width: 50%;
+  float: left;
+  background:url('images/img6.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  padding-top: 50%;
+  }
+
+
+.gif6 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img6.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+/* PARTICIPANT 7
+              --------------------------------------------------*/
+
+.img7 {
+  width: 50%;
+  float: left;
+  background:url('images/tendril.JPG') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  padding-top: 50%;
+  }
+
+
+.gif7 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/tendril_motion.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+/* PARTICIPANT 8
+              --------------------------------------------------*/
+
+.img8 {
+  width: 50%;
+  float: left;
+  background:url('images/img8.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+.gif8 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img8.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+/* PARTICIPANT 9
+              --------------------------------------------------*/
+
+.img9 {
+  width: 50%;
+  float: left;
+  background:url('images/img9.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 180%;
+  padding-top: 50%;
+  }
+
+
+.gif9 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img9.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  padding-top: 50%;
+  }
+
+
+  /* PARTICIPANT 10
+              --------------------------------------------------*/
+
+.img10 {
+  width: 50%;
+  float: left;
+  background:url('images/img10.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: 70% 75%;
+  background-size: 180%;
+  padding-top: 50%;
+  }
+
+
+.gif10 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img10.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+  /* PARTICIPANT 11
+              --------------------------------------------------*/
+
+.img11 {
+  width: 50%;
+  float: left;
+  background:url('images/img11.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  padding-top: 50%;
+  }
+
+
+.gif11 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img11.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  padding-top: 50%;
+  }
+
+
+  /* PARTICIPANT 12
+              --------------------------------------------------*/
+
+.img12 {
+  width: 50%;
+  float: left;
+  background:url('images/img12.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+.gif12 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img12.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  padding-top: 50%;
+  }
+
+
+
+  /* PARTICIPANT 13
+              --------------------------------------------------*/
+
+.img13 {
+  width: 50%;
+  float: left;
+  background:url('images/img13.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150%;
+  padding-top: 50%;
+  }
+
+
+.gif13 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img13.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  padding-top: 50%;
+  }
+
+
+
+  /* PARTICIPANT 13.5
+              --------------------------------------------------*/
+
+.img13d {
+  width: 50%;
+  float: left;
+  background:url('images/img13d.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160%;
+  padding-top: 50%;
+  }
+
+
+.gif13d {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img13d.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  padding-top: 50%;
+  }
+
+
+  /* PARTICIPANT 14
+              --------------------------------------------------*/
+
+.img14 {
+  width: 50%;
+  float: left;
+  background:url('images/img14.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130%;
+  padding-top: 50%;
+  }
+
+
+.gif14 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img14.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  padding-top: 50%;
+  }
+
+
+
+
+  /* PARTICIPANT 15
+              --------------------------------------------------*/
+
+.img15 {
+  width: 50%;
+  float: left;
+  background:url('images/img15.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 170%;
+  padding-top: 50%;
+  }
+
+.gif15 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img15.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+
+  /* PARTICIPANT 16
+              --------------------------------------------------*/
+
+.img16 {
+  width: 50%;
+  float: left;
+  background:url('images/img16d.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 190%;
+  padding-top: 50%;
+  }
+
+
+.gif16 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img16.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  padding-top: 50%;
+  }
+
+
+
+
+
+
+  /* PARTICIPANT 17
+              --------------------------------------------------*/
+
+.img17 {
+  width: 50%;
+  float: left;
+  background:url('images/img17.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+.gif17 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img17.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+
+
+  /* PARTICIPANT 18
+              --------------------------------------------------*/
+
+.img18 {
+  width: 50%;
+  float: left;
+  background:url('images/img182.jpeg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 50%;
+  }
+
+
+.gif18 {
+  color:white;
+  width: 50%;
+  float: left;
+  background:url('images/img18.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  padding-top: 50%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEXT
+--------------------------------------------------*/
+
+ol {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+blockquote {
+  margin-left: 20px;
+}
+
+.blur {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+
+
+/* MOBILE
+-------------------------------------------------- */
+
+@media screen and (max-width: 100px) {
+  html,
+  body, 
+  p,
+  .h1 {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+
+
+
+.solid button, 
+.area button, 
+.g button,
+.line button,
+.textbox button {
+    font-size: 12px;
+}
+
+
+
+.cover{
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background:url('images/tendril.JPG');
+  background-position: center;
+  background-size: 140vw;
+  grid-template-columns: 36px auto;
+}
+
+
+
+.g {
+  height:100vh;
+  width: 95%;
+  float: left;
+}
+
+.area {
+  padding: 5px;
+  border-top: 0px solid black;
+}
+
+
+.line {
+  padding: 5px;
+  border-top: 1px solid black;
+}
+
+
+.solid {
+  padding: 10px 5px 20px 5px;;
+}
+
+
+.dot {
+  padding: 5px;
+}
+
+
+#font {
+  font-size: 60vw;
+  line-height: 65vh;
+  float: center;
+}
+
+
+.textbox{
+text-align: center;
+overflow-wrap: break-word;
+word-wrap: break-word;
+}
   
+.column {
+  width: 100%;
+  float: center;
+  }
+
+.column2 {
+    width: 100%;
+    float: center;
+  }
+
+.left, .right
+    {
+      display: block; 
+      border-right: 1px solid black;
+    }
+
+
+ #weight-slider {
+  width: 40vw;
+}
+
+
+
+
+/* PARTICIPANTS
+-------------------------------------------------- */
+
+
+  .img1, .gif1, .img2, .gif2, .img3, .gif3, .img4, .gif4, .img5, .gif5, .img6, .gif6, .img7, .gif7, .img8, .gif8, .img9, .gif9, .img10, .gif10, .img11, .gif11, .img12, .gif12, .img13, .gif13, .img13d, .gif13d, .img14, .gif14, .img15, .gif15, .img16, .gif16, .img17, .gif17, .img18, .gif18 {
+    display: table-footer-group;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height:100%;
+    padding-top: 100%;
+
+  }
+
+}
