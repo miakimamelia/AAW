@@ -27,6 +27,19 @@ font-size: 3rem;
 font-family: monospace;
 }
 
+
+html {
+  scroll-behavior: smooth;
+ }
+
+ 
+ #down {
+  margin-top: 50%;
+  padding-bottom: 25%;
+ } 
+
+
+
 html,
 body, 
 p {
