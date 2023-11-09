@@ -23,6 +23,7 @@
 }
 h1 {
 padding: 20px;
+font-size: 3rem;
 font-family: monospace;
 }
 
@@ -36,23 +37,33 @@ p {
   line-height: 1.1;
 }
 
+.external-website {
+  box-shadow: 0 0 30px #fcfdfd, 0 0 30px #fcfdfd, 0 0 30px #fcfdfd, 0 0 30px #fcfdfd, 0 0 30px #fcfdfd, 0 0 30px #fcfdfd, 0 0 30px #fcfdfd;
+  width: 100%;
+  min-height: 500px;
+}
+.external-website iframe {
+  border: 0;
+  min-height: 500px;
+  width: 100%;
+  filter: blur(10px);
+}
+.external-website iframe:hover {
+  filter: none;
+}
 
 .flex-container {
-  
-  box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 12px;
-  margin: 5px;
   border-radius: 10px;
   font-size: 100%;
-  padding: 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-self: center;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
   position: relative;
-  background-color: rgb(229, 229, 229);
   z-index: 100;
 
 }
