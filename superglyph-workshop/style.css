@@ -22,7 +22,6 @@
   padding: 0;
 }
 h1 {
-font-size:3rem;
 padding: 20px;
 font-family: monospace;
 }
@@ -30,27 +29,72 @@ font-family: monospace;
 html,
 body, 
 p {
+  width: 100%;
   font-family: Necto, serif;
   font-size: 14px;
   font-style: normal;
   line-height: 1.1;
 }
 
-.logo {
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+.flex-container {
+  outline: 2px solid black;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 100%;
+  padding: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  gap: 5px;
 }
 
-.topnav {
-font-size: 2rem;
-text-align: center;
-padding: 20px;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.flex-items:nth-child(1) {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
 }
+
+.flex-items:nth-child(2) {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(3) {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(4) {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(5) {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
 
 .active {
   
@@ -326,17 +370,11 @@ hr {
 -------------------------------------------------- */
 
 .big{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
+	
 	display: flex;
-  overflow-x: hidden !important;
   overflow-y: hidden !important;
-  width: 100vw;
-  height: 100vh;
-	/* avoid browser level touch actions */
-	touch-action: none; 
+  overflow-x: hidden;
+	
 }
 
 
@@ -354,9 +392,7 @@ hr {
 }
 
 
-.right.scroll{
-  padding:right;
-}
+
 
 .left, 
 .right {
@@ -575,549 +611,6 @@ hr {
 }
 
 
-
-
-/* PARTICIPANT IMAGES
---------------------------------------------------*/
-       
-
-.img1, .gif1, .img2, .gif2 {
-  display: table-cell;
-  width: 100%;
-}
-
-
- /* PARTICIPANT 1
-              --------------------------------------------------*/
-
-.img1 {
-  width: 50%;
-  float: left;
-  background:url('images/bg.jpg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 101%;
-padding-top: 50%;
-  }
-
-
-.gif1 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/bg.jpg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
- /* PARTICIPANT 2
-              --------------------------------------------------*/
-
-
-.img2 {
-  width: 50%;
-  float: left;
-  background:url('images/bg.jpg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 155%;
-padding-top: 50%;
-  }
-
-
-.gif2 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/bg.jpg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90%;
-  padding-top: 50%;
-  }
-
-
-
-/* PARTICIPANT 3
-              --------------------------------------------------*/
-
-
-.img3 {
-  width: 50%;
-  float: left;
-   background:url('images/bg.jpg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 120%;
-  padding-top: 50%;
-  }
-
-
-.gif3 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img3_1.png') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70%;
-  padding-top: 50%;
-  }
-
-
-
-/* PARTICIPANT 4
-              --------------------------------------------------*/
-
-.img4 {
-  width: 50%;
-  float: left;
-  background:url('images/img4.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-.gif4 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img4.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-
-
-/* PARTICIPANT 6
-              --------------------------------------------------*/
-
-.img6 {
-  width: 50%;
-  float: left;
-  background:url('images/img6.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  padding-top: 50%;
-  }
-
-
-.gif6 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img6.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-/* PARTICIPANT 7
-              --------------------------------------------------*/
-
-.img7 {
-  width: 50%;
-  float: left;
-  background:url('images/tendril.JPG') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  padding-top: 50%;
-  }
-
-
-.gif7 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/tendril_motion.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-/* PARTICIPANT 8
-              --------------------------------------------------*/
-
-.img8 {
-  width: 50%;
-  float: left;
-  background:url('images/img8.png') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-.gif8 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img8.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-/* PARTICIPANT 9
-              --------------------------------------------------*/
-
-.img9 {
-  width: 50%;
-  float: left;
-  background:url('images/img9.png') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 180%;
-  padding-top: 50%;
-  }
-
-
-.gif9 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img9.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  padding-top: 50%;
-  }
-
-
-  /* PARTICIPANT 10
-              --------------------------------------------------*/
-
-.img10 {
-  width: 50%;
-  float: left;
-  background:url('images/img10.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: 70% 75%;
-  background-size: 180%;
-  padding-top: 50%;
-  }
-
-
-.gif10 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img10.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-  /* PARTICIPANT 11
-              --------------------------------------------------*/
-
-.img11 {
-  width: 50%;
-  float: left;
-  background:url('images/img11.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90%;
-  padding-top: 50%;
-  }
-
-
-.gif11 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img11.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90%;
-  padding-top: 50%;
-  }
-
-
-  /* PARTICIPANT 12
-              --------------------------------------------------*/
-
-.img12 {
-  width: 50%;
-  float: left;
-  background:url('images/img12.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-.gif12 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img12.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90%;
-  padding-top: 50%;
-  }
-
-
-
-  /* PARTICIPANT 13
-              --------------------------------------------------*/
-
-.img13 {
-  width: 50%;
-  float: left;
-  background:url('images/img13.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 150%;
-  padding-top: 50%;
-  }
-
-
-.gif13 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img13.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  padding-top: 50%;
-  }
-
-
-
-  /* PARTICIPANT 13.5
-              --------------------------------------------------*/
-
-.img13d {
-  width: 50%;
-  float: left;
-  background:url('images/img13d.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 160%;
-  padding-top: 50%;
-  }
-
-
-.gif13d {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img13d.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  padding-top: 50%;
-  }
-
-
-  /* PARTICIPANT 14
-              --------------------------------------------------*/
-
-.img14 {
-  width: 50%;
-  float: left;
-  background:url('images/img14.png') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 130%;
-  padding-top: 50%;
-  }
-
-
-.gif14 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img14.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  padding-top: 50%;
-  }
-
-
-
-
-  /* PARTICIPANT 15
-              --------------------------------------------------*/
-
-.img15 {
-  width: 50%;
-  float: left;
-  background:url('images/img15.png') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 170%;
-  padding-top: 50%;
-  }
-
-.gif15 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img15.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-
-  /* PARTICIPANT 16
-              --------------------------------------------------*/
-
-.img16 {
-  width: 50%;
-  float: left;
-  background:url('images/img16d.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 190%;
-  padding-top: 50%;
-  }
-
-
-.gif16 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img16.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-  padding-top: 50%;
-  }
-
-
-
-
-
-
-  /* PARTICIPANT 17
-              --------------------------------------------------*/
-
-.img17 {
-  width: 50%;
-  float: left;
-  background:url('images/img17.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-.gif17 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img17.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-
-
-  /* PARTICIPANT 18
-              --------------------------------------------------*/
-
-.img18 {
-  width: 50%;
-  float: left;
-  background:url('images/img182.jpeg') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 50%;
-  }
-
-
-.gif18 {
-  color:white;
-  width: 50%;
-  float: left;
-  background:url('images/img18.gif') ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-  padding-top: 50%;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* TEXT
 --------------------------------------------------*/
 
@@ -1145,7 +638,7 @@ blockquote {
 
 /* MOBILE
 -------------------------------------------------- */
-
+/* 
 @media screen and (max-width: 1200px) {
   html,
   body, 
@@ -1240,21 +733,18 @@ word-wrap: break-word;
 
  #weight-slider {
   width: 40vw;
-}
+} */
 
 /* PARTICIPANTS
 -------------------------------------------------- */
 
-
-  .img1, .gif1, .img2, .gif2, .img3, .gif3, .img4, .gif4, .img5, .gif5, .img6, .gif6, .img7, .gif7, .img8, .gif8, .img9, .gif9, .img10, .gif10, .img11, .gif11, .img12, .gif12, .img13, .gif13, .img13d, .gif13d, .img14, .gif14, .img15, .gif15, .img16, .gif16, .img17, .gif17, .img18, .gif18 {
-    display: table-footer-group;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height:100%;
-    padding-top: 100%;
-
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .flex-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
   }
-
-
- 
