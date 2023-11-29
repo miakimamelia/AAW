@@ -1,43 +1,22 @@
 
+// Get the button
+let mybutton = document.getElementById("myBtn");
 
-let weightSlider = document.getElementById("weight-slider");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-let fontWeight = document.getElementById("font", "fonttwo");
-
-weightSlider.oninput = function() {
-  fontWeight.style.setProperty('font-weight',weightSlider.value.toString(10)) 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
-
-
-  function fillCode() {
-    editable2.innerHTML = textareaCSS2.value;
-    document.querySelector('.demo2').style.setProperty('--text-axis', 88);
-
-    editable3.innerHTML = textareaCSS3.value;
-    document.querySelector('.demo3').style.setProperty('--wght-axis', 400);
-
-  }
-
-  // get the inputs
-  const inputs = [].slice.call(document.querySelectorAll('.demo2 .controls input'));
-
-
-  // listen for changes
-  inputs.forEach(input => input.addEventListener('change', handleUpdate));
-  inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-
-  function handleUpdate(e) {
-    document.querySelector('.demo2').style.setProperty(`--${this.id}`, this.value);
-    document.querySelector('.demo3').style.setProperty(`--${this.id}`, this.value);
-  }
-
-
-
-  var rangeinput = document.querySelector('.controls--slider');
-
-  function fillCode() {
-
-  }
-
+ 
