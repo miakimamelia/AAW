@@ -1,6 +1,6 @@
 var x = 0;
 var y = 0;
-var gap = 20;
+var gap = 50;
 var deg = 0;
 var color2 = 'rgb(255,255,255)';
 
@@ -27,7 +27,7 @@ function draw() {
 function maze() {
   stroke(color2);
   strokeWeight(1.5);
-  if (random(1) < 0.1) {
+  if (random(1) < 0.9) {
     line(x, y, x + gap, y + gap);
   } else {
     line(x, y + gap, x + gap, y);
@@ -47,7 +47,7 @@ function grid() {
 function spin() {
   push();
   scale(1);
-  translate(width / 2, height / 2);
+  translate(width / 2, height / 1);
   rotate(radians(deg));
   deg++;
   fill(color2);

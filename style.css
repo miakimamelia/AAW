@@ -13,6 +13,18 @@ iframe {
 
 }
 
+.four {
+
+  position: absolute;
+  z-index: 2; /* Set a higher z-index value */
+}
+
+.bg {
+  position: absolute;
+  z-index: 0; /* Set a lower z-index value */
+}
+
+
 /* Flex container for vertical alignment */
 main {
   display: flex;
