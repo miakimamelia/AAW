@@ -59,9 +59,9 @@ class Wave {
       let ang = i + random() * 0;
       let xx = rr * cos(ang),
         yy = rr * sin(ang);
-      if (random() < 0.5) {
-        point(xx, yy);
-      }
+
+
+  
       if (i % this.polygonCount == 0) {
         vertex(xx, yy);
       }
@@ -99,7 +99,7 @@ class Radiation {
     noStroke();
     translate(this.p);
     if (frameCount - this.lastWaveEmitTs < 5) {
-      scale(5);
+      scale(2);
     }
     fill(this.color);
     ellipse(0, 0, 20, 20);
@@ -125,26 +125,29 @@ class Radiation {
 
 function setup() {
   pixelDensity(2);
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(1000, 1000);
   background(100);
+  let total = 1;
 
-  // Create a single Radiation object at the center
-  radiations.push(new Radiation({ p: createVector(width / 2, height / 2) }));
+ 
+  radiations.push(
+    new Radiation({
+      p: createVector(2 * width / 3, height / 2),
+    })
+  );
 
   fill(0);
   rect(0, 0, width, height);
 
-  overAllTexture = createGraphics(width, height);
-  overAllTexture.loadPixels();
-  for (var i = 0; i < width + 50; i++) {
-    for (var o = 0; o < height + 50; o++) {
-      overAllTexture.set(
-        i,
-        o,
-        color(200, noise(i / 10, (i * o) / 500) * random([10, 10, 20, 70]))
-      );
-    }
-  }
+ 
+	overAllTexture=createGraphics(width,height)
+	overAllTexture.loadPixels()
+	for(var i=0;i<width+50;i++){
+		for(var o=0;o<height+50;o++){
+			overAllTexture.set(i,o,color(200,noise(i/10,i*o/300)*random([0,0,20	,50])))
+		}
+	}
+  
   overAllTexture.updatePixels();
   canvas.mousePressed(handleMousePress);
   windowResized();

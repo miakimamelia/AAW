@@ -1,0 +1,20 @@
+
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+/* Set width and height of the iframes */
+iframe {
+  width: 100vw;
+  height: 100vh;
+  display: block; /* Ensures that iframes behave as block-level elements */
+  border: none; /* Removes default iframe border */
+
+}
+
+/* Flex container for vertical alignment */
+main {
+  display: flex;
+  flex-direction: column;
+}
