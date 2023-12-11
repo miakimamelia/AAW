@@ -9,8 +9,8 @@ canvas {
 }
 
 h1 {
-    color:rgb(0, 0, 0);
-    font-family: monospace;
+    color:white;
+    font-family: Mono;
     font-size: small;
     padding-left:70px;
     padding-top:50px;

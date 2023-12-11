@@ -96,12 +96,7 @@ class Radiation {
   draw() {
     push();
     noStroke();
-    translate(this.p);
-    if (frameCount - this.lastWaveEmitTs < 5) {
-      scale(2);
-    }
-    fill(this.color);
-    ellipse(0, 0, 20, 20);
+    
     pop();
   }
 

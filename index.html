@@ -4,72 +4,196 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200&display=swap" rel="stylesheet">
   <title>p5.js example</title>
 
+<style>
 
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  }
+  
+  .div1 { grid-area: 1 / 1 / 2 / 2; }
+  .div2 { grid-area: 2 / 1 / 3 / 2; }
+  .div3 { grid-area: 3 / 1 / 4 / 2; }
+  .div4 { grid-area: 4 / 1 / 5 / 2; }
+  .div5 { grid-area: 5 / 1 / 6 / 2; }
+  .div6 { grid-area: 6 / 1 / 7 / 2; }
+  .div7 { grid-area: 7 / 1 / 8 / 2; }
+  .div8 { grid-area: 8 / 1 / 9 / 2; }
+  .div9 { grid-area: 9 / 1 / 10 / 2; }
+  .div10 { grid-area: 10 / 1 / 11 / 2; }
+
+
+
+
+@font-face {
+  font-family: Mono;
+  src: url(SyneMono-Regular.ttf);
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('background.png');
+    background-size: contain ;
+    background-repeat: repeat;
+}
+/* Set width and height of the iframes */
+
+.one p {
+  padding: 20%;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.two p {
+  font-size: small;
+  position: absolute;
+  padding-left: 20%;
+  padding-right: 20%;
+  z-index: 5;
+  text-align: center;
+}
+
+.three p {
+  position: relative;
+}
+
+.div2 {
+  position: absolute;
+}
+p {
+    font-family: Mono;
+    font-size: large;
+  
+  }
+
+  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10 {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    font-family: 'Krub', sans-serif;
+    -webkit-backdrop-filter: var(--filter-blur);
+    backdrop-filter: var(--filter-blur);
+    background-color: rgba(230,234,238,.8);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    padding-left: 50px;
+    /* justify-content: space-between; */
+    line-height: 1;
+    outline: 1px solid black; /* You can change the color and thickness as needed */
+  }
+
+  .ascii {
+  z-index: 5;
+  position: absolute;
+  mix-blend-mode: hard-light;
+  filter: sepia();
+  transform: translateX(50vw); /* Adjust the value as needed */
+  width: 50vw;
+  
+  }
+  
+  .ascii2 {
+    
+    z-index: 5;
+    position: absolute;
+    mix-blend-mode: overlay;
+    filter: invert() hue-rotate(500deg) brightness(50%);
+    width: 50vw;
+  }
+
+img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+
+}
+
+</style>
 
 </head>
 
 <body>
   <main>
     <H1>ASIAN AMERICAN STUDIES</H1>
+<div class="one">
+  <p>This is a single scrollable webpage that serves as a visual-conceptual key, drawing from related sources, dialogues, and personal narratives of the Asian American diaspora. It requires user interactivity that takes place physically, pragmatically, and, with hopes, collaboratively.</p>
 
-
-    <div class="intro">
-      <iframe class="bgmain" src="https://miakimamelia.github.io/AAW/0/" frameborder="0"></iframe>
-      <p>This is a single scrollable webpage that serves as a visual-conceptual key, drawing from related sources, dialogues, and personal narratives of the Asian American diaspora. It requires user interactivity that takes place physically, pragmatically, and, with hopes, collaboratively.</p>
-    </div>
-    
-<div class="slide2">
+</div>
+<div class="two">
   <p>For one to make speculations and theories on the cultural and societal phenomena within diasporic communities, one has to notice the patterns as well as the inconsistencies within those patterns.</p>
- <iframe class="pattern" src="https://miakimamelia.github.io/AAW/3/slide3/index.html" frameborder="0"></iframe>
-
 </div>
-
-
-<div class="slide3">
-  <p>one such patterns is that asian americans have the highest suicide rates (source) stats</p>
-  <iframe src="" frameborder="0"></iframe>
-</div>
-
-<div class="slide4">
-  <p>it creates a dissonance of identity between how you’ve been told to think and how you actually think. what you are, and what others percieve you as. such as the words  oriental / occidental</p>
-  <iframe class="ascii2" src="https://miakimamelia.github.io/AAW/Ascii_webcam_copy_2023_12_11_02_38_10/index.html" frameborder="0"></iframe>
-
-  <iframe class="ascii" src="https://miakimamelia.github.io/AAW/Ascii_webcam_copy_2023_12_11_02_38_10/index.html" frameborder="0"></iframe>
-  <iframe class="bg" src="https://miakimamelia.github.io/AAW/0/" frameborder="0"></iframe>
-</div>
-
-
-<div class="melancholia">
-  <p>this is the part where i talk about how melancholia is said to exist within the individual, this is not true</p>
-  <iframe class="pattern" src="https://miakimamelia.github.io/AAW/1/slide 1/index.html" frameborder="0"></iframe>
-</div>
-
-
-<div class="structure">
-  <p>structures dont appear over night, they compound</p>
-
-  <iframe class="drawbg" src="/structures/index.html" frameborder="0"></iframe>
-  <iframe class="bg1" src="https://miakimamelia.github.io/AAW/0/" frameborder="0"></iframe>
-
-</div>
-<!-- 
-<div>
-
-    <iframe src="/1/slide 1/index.html" frameborder="0"></iframe>
-    <iframe src="/2/slide_2/index.html" frameborder="0"></iframe>
    
-     
-  </div>
+<!--     
+    <p>it creates a dissonance of identity between how you’ve been told to think and how you actually think. what you are, and what others percieve you as. such as the words  oriental / occidental</p>
 
-      <iframe class="four" src="/4/slide4/index.html" frameborder="0"></iframe>  
-      <iframe class="bg" src="/0/index.html" frameborder="0"></iframe>
-    </div> -->
+           
+    <p>this is the part where i talk about how melancholia is said to exist within the individual, this is not true</p>
+
+    
+    <p>structures dont appear over night, they compound</p> -->
+
+    <div class="parent">
+
+      <div class="div1">
+        
+      </div>
+   
+    
+      <div class="div2"> 
+            <iframe class="pattern" src="https://miakimamelia.github.io/AAW/3/slide3/index.html" frameborder="0"></iframe>
+      </div>
+
+ 
+      <div class="div3"> 
+        
+  <!-- <img src="background.png" alt="bg"> -->
+          <iframe class="ascii2" src="https://miakimamelia.github.io/AAW/Ascii_webcam_copy_2023_12_11_02_38_10/index.html" frameborder="0"></iframe>
+
+          <iframe class="ascii" src="https://miakimamelia.github.io/AAW/Ascii_webcam_copy_2023_12_11_02_38_10/index.html" frameborder="0"></iframe>
+
+      </div>
+
+      <div class="div4"> 
+         
+          <iframe class="pattern" src="https://miakimamelia.github.io/AAW/1/slide 1/index.html" frameborder="0"></iframe>
+
+      </div>
+
+      <div class="div5"> 
+
+        <iframe class="drawbg" src="/structures/index.html" frameborder="0"></iframe>
+
+      </div>
+      <div class="div6"> </div>
+      <div class="div7"> </div>
+      <div class="div8"> </div>
+      <div class="div9"> </div>
+      <div class="div10"> </div>
+      </div>
+
 
 </main>
 </body>
