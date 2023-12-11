@@ -9,22 +9,21 @@ canvas {
 }
 
 h1 {
-    color:white;
+    color:rgb(0, 0, 0);
     font-family: Mono;
     font-size: small;
     padding-left:70px;
     padding-top:50px;
-
-
 }
 
 p {
-    color:white;
+    color:rgb(255, 255, 255);
     padding-left:70px;
+    font-family: mono;
 }
 
 
 @font-face {
     font-family: Mono;
-    src: url(SyneMono-Regular.ttf);
+    src: url(../SyneMono-Regular.ttf);
   }

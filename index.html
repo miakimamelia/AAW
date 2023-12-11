@@ -65,15 +65,89 @@ body {
 }
 
 .three p {
+  color: rgb(249, 249, 249);
+  position: absolute;
+  font-size: small;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top:50vh;
+  z-index: 5;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.four p {
   position: absolute;
   font-size: small;
   padding-left: 20%;
   padding-right: 20%;
+  margin-top: 30vh;
   z-index: 5;
   text-align: center;
 }
 
+.five p {
+  position: absolute;
+  font-size: small;
+  
+  z-index: 5;
+  text-align: center;
+background-color: rgb(0, 0, 0);
+color: aliceblue;
+margin:10%;
+margin-top: 40%;
+border-radius: 10px;
+}
 
+.six p {
+  position: absolute;
+  font-size: small;
+  text-align: center;
+  margin:10%;
+}
+
+
+.seven p {
+  position: absolute;
+  font-size: small;
+  text-align: center;
+  margin:10%;
+}
+.eight p {
+  position: absolute;
+  font-size: small;
+  text-align: center;
+  margin:10%;
+}
+.nine p {
+  position: absolute;
+  font-size: small;
+  text-align: center;
+  margin:10%;
+}
+.ten p {
+  position: absolute;
+  font-size: small;
+  text-align: center;
+  margin:10%;
+}
+
+
+.drawbg {
+  position: relative;
+  z-index: 1;
+}
+.drawimg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: exclusion;
+  z-index: 10;
+  pointer-events: none;
+  filter: saturate(150%);
+
+}
 p {
     font-family: Mono;
     font-size: large;
@@ -83,7 +157,7 @@ p {
   .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10 {
     width: 100vw;
     height: 100vh;
-    z-index: -10;
+    z-index: 0;
   }
 
   iframe {
@@ -92,7 +166,7 @@ p {
   }
 
   h1 {
-    font-family: 'Krub', sans-serif;
+    font-family: Mono;
     -webkit-backdrop-filter: var(--filter-blur);
     backdrop-filter: var(--filter-blur);
     background-color: rgba(230,234,238,.8);
@@ -186,21 +260,51 @@ p {
       </div>
 
       <div class="div4"> 
-         
+        <div class="four">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium quibusdam voluptas eos, perspiciatis sunt unde voluptatum esse fugit ab consequuntur deserunt atque doloribus aut minus!</p>
+
+        </div>
+       
           <iframe class="pattern" src="https://miakimamelia.github.io/AAW/1/slide 1/index.html" frameborder="0"></iframe>
 
       </div>
 
       <div class="div5"> 
 
+        <div class="five">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur officiis consequuntur sed mollitia provident voluptates rerum ab sint recusandae ipsa.</p>
+        </div>
+
+        <img class="drawimg" src="background.png" alt="background">
         <iframe class="drawbg" src="/structures/index.html" frameborder="0"></iframe>
 
       </div>
-      <div class="div6"> </div>
-      <div class="div7"> </div>
-      <div class="div8"> </div>
-      <div class="div9"> </div>
-      <div class="div10"> </div>
+      <div class="div6"> 
+        <div class="six">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem adipisci, hic saepe quidem praesentium temporibus voluptatem provident porro, explicabo earum delectus ad, unde quibusdam culpa tenetur asperiores aliquam aspernatur expedita?</p>
+        </div>
+      </div>
+      <div class="div7">
+        <div class="seven">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem adipisci, hic saepe quidem praesentium temporibus voluptatem provident porro, explicabo earum delectus ad, unde quibusdam culpa tenetur asperiores aliquam aspernatur expedita?</p>
+        </div>
+       </div>
+      <div class="div8"> 
+        <div class="eight">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem adipisci, hic saepe quidem praesentium temporibus voluptatem provident porro, explicabo earum delectus ad, unde quibusdam culpa tenetur asperiores aliquam aspernatur expedita?</p>
+        </div>
+
+      </div>
+      <div class="div9">
+        <div class="nine">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem adipisci, hic saepe quidem praesentium temporibus voluptatem provident porro, explicabo earum delectus ad, unde quibusdam culpa tenetur asperiores aliquam aspernatur expedita?</p>
+        </div>
+       </div>
+      <div class="div10"> 
+        <div class="ten">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem adipisci, hic saepe quidem praesentium temporibus voluptatem provident porro, explicabo earum delectus ad, unde quibusdam culpa tenetur asperiores aliquam aspernatur expedita?</p>
+        </div>
+      </div>
       </div>
 
 
