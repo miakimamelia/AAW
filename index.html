@@ -51,7 +51,8 @@ body {
 .one p {
   padding: 20%;
   margin-bottom: 100px;
-  position: relative;
+  position: absolute;
+  z-index: 5;
 }
 
 .two p {
@@ -64,12 +65,15 @@ body {
 }
 
 .three p {
-  position: relative;
+  position: absolute;
+  font-size: small;
+  padding-left: 20%;
+  padding-right: 20%;
+  z-index: 5;
+  text-align: center;
 }
 
-.div2 {
-  position: absolute;
-}
+
 p {
     font-family: Mono;
     font-size: large;
@@ -79,12 +83,12 @@ p {
   .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10 {
     width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: -10;
   }
 
   iframe {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
 
   h1 {
@@ -122,13 +126,12 @@ p {
     width: 50vw;
   }
 
-img {
+  .bg {
   position: relative;
+  mix-blend-mode: difference;
+  z-index: 6; /* Set a lower z-index value */
   width: 100vw;
   height: 100vh;
-  mix-blend-mode: multiply;
-  pointer-events: none;
-
 }
 
 </style>
@@ -138,18 +141,12 @@ img {
 <body>
   <main>
     <H1>ASIAN AMERICAN STUDIES</H1>
-<div class="one">
-  <p>This is a single scrollable webpage that serves as a visual-conceptual key, drawing from related sources, dialogues, and personal narratives of the Asian American diaspora. It requires user interactivity that takes place physically, pragmatically, and, with hopes, collaboratively.</p>
 
-</div>
-<div class="two">
-  <p>For one to make speculations and theories on the cultural and societal phenomena within diasporic communities, one has to notice the patterns as well as the inconsistencies within those patterns.</p>
-</div>
+
    
-<!--     
-    <p>it creates a dissonance of identity between how you’ve been told to think and how you actually think. what you are, and what others percieve you as. such as the words  oriental / occidental</p>
+  
 
-           
+<!--            
     <p>this is the part where i talk about how melancholia is said to exist within the individual, this is not true</p>
 
     
@@ -158,21 +155,33 @@ img {
     <div class="parent">
 
       <div class="div1">
+        <div class="one">
+          <p>This is a single scrollable webpage that serves as a visual-conceptual key, drawing from related sources, dialogues, and personal narratives of the Asian American diaspora. It requires user interactivity that takes place physically, pragmatically, and, with hopes, collaboratively.</p>
         
+        </div>
       </div>
    
     
       <div class="div2"> 
+        <div class="two">
+          <p>For one to make speculations and theories on the cultural and societal phenomena within diasporic communities, one has to notice the patterns as well as the inconsistencies within those patterns.</p>
+        </div>
+           
             <iframe class="pattern" src="https://miakimamelia.github.io/AAW/3/slide3/index.html" frameborder="0"></iframe>
       </div>
 
  
       <div class="div3"> 
-        
-  <!-- <img src="background.png" alt="bg"> -->
+        <div class="three">
+          <p>it creates a dissonance of identity between how you’ve been told to think and how you actually think. what you are, and what others percieve you as. such as the words  oriental / occidental</p>
+        </div>
+  
           <iframe class="ascii2" src="https://miakimamelia.github.io/AAW/Ascii_webcam_copy_2023_12_11_02_38_10/index.html" frameborder="0"></iframe>
-
+        
           <iframe class="ascii" src="https://miakimamelia.github.io/AAW/Ascii_webcam_copy_2023_12_11_02_38_10/index.html" frameborder="0"></iframe>
+
+          <img class="bg" src="background.png" alt="bgimg">
+        
 
       </div>
 
