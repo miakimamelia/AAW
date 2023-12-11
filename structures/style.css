@@ -1,0 +1,30 @@
+
+
+
+canvas {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+h1 {
+    color:rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: small;
+    padding-left:70px;
+    padding-top:50px;
+
+
+}
+
+p {
+    color:white;
+    padding-left:70px;
+}
+
+
+@font-face {
+    font-family: Mono;
+    src: url(SyneMono-Regular.ttf);
+  }

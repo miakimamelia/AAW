@@ -24,10 +24,34 @@ iframe {
 }
 
 
+.drawbg {
+  z-index: 0;
+  position: absolute;
+  mix-blend-mode: overlay;
+
+}
+
+.bg1 {
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+
+.structure p{
+  margin: 100px;
+ text-align: center;
+z-index: 100;
+  font-size: larger;
+  font-family: Mono;
+  position: absolute;
+}
+
 .pattern {
 
-    position: absolute;
-    z-index: 0; /* Set a lower z-index value */
+
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 90; /* Set a lower z-index value */
   
 }
 
