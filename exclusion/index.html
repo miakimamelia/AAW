@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .blue-dot {
+      position: absolute;
+      background-color: blue;
+      width: 20px; /* Adjust the size of each dot */
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .light-blue-dot {
+      position: absolute;
+      background-color: lightblue;
+      width: 20px; /* Adjust the size of the dot */
+      height: 20px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // Number of blue dots
+    var numDots = 20;
+
+    // Radius of the circular arrangement
+    var radius = 150;
+
+    // Shift amount to the left
+    var shiftLeft = 50;
+
+    for (var i = 0; i < numDots; i++) {
+      // Calculate the angle for each dot
+      var angle = (i / numDots) * (2 * Math.PI);
+
+      // Calculate the position of each dot with a leftward shift
+      var x = Math.cos(angle) * radius + window.innerWidth / 3 - shiftLeft;
+      var y = Math.sin(angle) * radius + window.innerHeight / 2;
+
+      // Create a new dot element
+      var dot = document.createElement("div");
+      dot.className = "blue-dot";
+      dot.style.left = x + "px";
+      dot.style.top = y + "px";
+
+      // Append the dot to the body
+      document.body.appendChild(dot);
+    }
+
+    // Create a light blue dot slightly outside of the circle with a leftward shift
+    var lightBlueDot = document.createElement("div");
+    lightBlueDot.className = "light-blue-dot";
+    lightBlueDot.style.left = window.innerWidth / 2 + radius + 150 - shiftLeft + "px"; // Adjust the position
+    lightBlueDot.style.top = window.innerHeight / 2 + "px";
+    
+    // Append the light blue dot to the body
+    document.body.appendChild(lightBlueDot);
+  </script>
+
+</body>
+</html>

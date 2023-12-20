@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+  <title>Spring Animation</title>
+</head>
+<body>
+  <canvas id="springCanvas" width="800" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById('springCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const dot1 = { x: 100, y: 200, radius: 20, color: 'blue' };
+    const dot2 = { x: 300, y: 200, radius: 20, color: 'blue' };
+    let isDragging = false;
+
+    canvas.addEventListener('mousedown', (e) => {
+      const mouseX = e.clientX - canvas.getBoundingClientRect().left;
+      const mouseY = e.clientY - canvas.getBoundingClientRect().top;
+
+      // Check if the mouse is over dot1
+      const distance = Math.sqrt((mouseX - dot1.x) ** 2 + (mouseY - dot1.y) ** 2);
+      if (distance <= dot1.radius) {
+        isDragging = true;
+      }
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        dot1.x = e.clientX - canvas.getBoundingClientRect().left;
+        dot1.y = e.clientY - canvas.getBoundingClientRect().top;
+        draw();
+      }
+    });
+
+    canvas.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw the spring
+      ctx.beginPath();
+      ctx.moveTo(dot1.x, dot1.y);
+      ctx.lineTo(dot2.x, dot2.y);
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Draw the dots
+      drawDot(dot1);
+      drawDot(dot2);
+    }
+
+    function drawDot(dot) {
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.radius, 0, 2 * Math.PI);
+      ctx.fillStyle = dot.color;
+      ctx.fill();
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    function update() {
+      // Simple spring physics
+      const springStrength = 0.05;
+      const dx = dot2.x - dot1.x;
+      const dy = dot2.y - dot1.y;
+
+      dot1.x += dx * springStrength;
+      dot1.y += dy * springStrength;
+
+      draw();
+
+      requestAnimationFrame(update);
+    }
+
+    // Initial draw and start animation loop
+    draw();
+    update();
+  </script>
+</body>
+</html>
